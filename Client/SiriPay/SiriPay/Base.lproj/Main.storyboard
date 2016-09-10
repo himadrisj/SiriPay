@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -44,6 +43,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="jJk-2n-6PH"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -154,9 +156,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Kjp-0J-kje" firstAttribute="centerX" secondItem="Ui4-Gg-7Sr" secondAttribute="centerX" id="50B-jh-bPX"/>
                             <constraint firstItem="Kjp-0J-kje" firstAttribute="centerY" secondItem="Ui4-Gg-7Sr" secondAttribute="centerY" constant="79" id="CDn-Fb-Yxu"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Kjp-0J-kje" secondAttribute="trailing" constant="95" id="g2u-OF-d4f"/>
-                            <constraint firstItem="Rq1-jy-WR4" firstAttribute="leading" secondItem="Ui4-Gg-7Sr" secondAttribute="leadingMargin" constant="126" id="s0f-k3-Dse"/>
+                            <constraint firstItem="Rq1-jy-WR4" firstAttribute="centerX" secondItem="Ui4-Gg-7Sr" secondAttribute="centerX" id="W99-M7-wYz"/>
                             <constraint firstItem="Rq1-jy-WR4" firstAttribute="centerY" secondItem="Ui4-Gg-7Sr" secondAttribute="centerY" constant="-49" id="tHS-Oe-5CN"/>
                         </constraints>
                     </view>
