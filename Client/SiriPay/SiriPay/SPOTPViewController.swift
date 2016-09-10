@@ -20,7 +20,7 @@ extension SPOTPViewController : UITextFieldDelegate {
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         
-        if textField.text?.characters.count == 4 {
+        if textField.text?.characters.count == 3 {
             nextButton.enabled = true
         }
         

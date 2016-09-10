@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -106,7 +107,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="OTP" id="WxS-TZ-f39">
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Next" id="Wrz-hc-RNU"/>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Next" id="Wrz-hc-RNU">
+                            <connections>
+                                <segue destination="x2H-f1-qOe" kind="show" id="KBm-qX-7jy"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="nextButton" destination="Wrz-hc-RNU" id="S7A-hx-blf"/>
@@ -115,6 +120,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SWa-tH-JUr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1755" y="791"/>
+        </scene>
+        <!--SiriPay-->
+        <scene sceneID="J7S-4A-L63">
+            <objects>
+                <viewController id="x2H-f1-qOe" customClass="SPMainViewController" customModule="SiriPay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y9F-8E-qnb"/>
+                        <viewControllerLayoutGuide type="bottom" id="fXq-li-jIS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ui4-Gg-7Sr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rq1-jy-WR4" userLabel="Send">
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" red="0.32549019610000002" green="0.38823529410000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendButtonPressed:" destination="x2H-f1-qOe" eventType="touchUpInside" id="He6-Y2-AUt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kjp-0J-kje" userLabel="Receive">
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Receive">
+                                    <color key="titleColor" red="0.32549019610000002" green="0.38823529410000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="receiveButtonPressed:" destination="x2H-f1-qOe" eventType="touchUpInside" id="U3Z-TW-3qC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Kjp-0J-kje" firstAttribute="centerY" secondItem="Ui4-Gg-7Sr" secondAttribute="centerY" constant="79" id="CDn-Fb-Yxu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kjp-0J-kje" secondAttribute="trailing" constant="95" id="g2u-OF-d4f"/>
+                            <constraint firstItem="Rq1-jy-WR4" firstAttribute="leading" secondItem="Ui4-Gg-7Sr" secondAttribute="leadingMargin" constant="126" id="s0f-k3-Dse"/>
+                            <constraint firstItem="Rq1-jy-WR4" firstAttribute="centerY" secondItem="Ui4-Gg-7Sr" secondAttribute="centerY" constant="-49" id="tHS-Oe-5CN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="SiriPay" id="B8Z-Sr-HLg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7eR-hx-RgI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2583.75" y="789.08450704225356"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IVG-Sn-hse">
