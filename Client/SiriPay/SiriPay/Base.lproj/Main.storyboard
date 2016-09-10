@@ -9,7 +9,7 @@
         <!--Sign in-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SiriPay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SPSignupViewController" customModule="SiriPay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -30,7 +30,7 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Skg-Bl-qCH" userLabel="EmailField">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="167" id="9ZQ-Kd-AbZ"/>
+                                    <constraint firstAttribute="width" constant="196" id="9ZQ-Kd-AbZ"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -38,30 +38,41 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="arz-2d-b4O" userLabel="NumberField">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="167" id="xDL-RA-haV"/>
+                                    <constraint firstAttribute="width" constant="196" id="xDL-RA-haV"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="arz-2d-b4O" firstAttribute="leading" secondItem="jmx-F8-4Pk" secondAttribute="trailing" constant="37" id="0bw-fC-any"/>
-                            <constraint firstItem="Skg-Bl-qCH" firstAttribute="leading" secondItem="yd1-fL-Xuq" secondAttribute="trailing" constant="41" id="7hl-ag-Teb"/>
+                            <constraint firstItem="arz-2d-b4O" firstAttribute="leading" secondItem="jmx-F8-4Pk" secondAttribute="trailing" constant="8.5" id="0bw-fC-any"/>
+                            <constraint firstItem="Skg-Bl-qCH" firstAttribute="leading" secondItem="yd1-fL-Xuq" secondAttribute="trailing" constant="12.5" id="7hl-ag-Teb"/>
                             <constraint firstItem="arz-2d-b4O" firstAttribute="centerY" secondItem="jmx-F8-4Pk" secondAttribute="centerY" constant="1.5" id="Je3-5r-ldk"/>
                             <constraint firstItem="Skg-Bl-qCH" firstAttribute="centerY" secondItem="yd1-fL-Xuq" secondAttribute="centerY" id="QYy-rs-g0k"/>
                             <constraint firstItem="jmx-F8-4Pk" firstAttribute="centerX" secondItem="yd1-fL-Xuq" secondAttribute="centerX" id="Z57-yS-3dd"/>
                             <constraint firstItem="yd1-fL-Xuq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-92.5" id="fL8-ha-8Gr"/>
-                            <constraint firstItem="yd1-fL-Xuq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-23.5" id="ghp-Be-Ck4"/>
-                            <constraint firstItem="jmx-F8-4Pk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="23.5" id="jCZ-O2-Bjs"/>
+                            <constraint firstItem="yd1-fL-Xuq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-56.75" id="ghp-Be-Ck4"/>
+                            <constraint firstItem="jmx-F8-4Pk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-9.75" id="jCZ-O2-Bjs"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Sign in" id="t9z-NV-36a"/>
+                    <navigationItem key="navigationItem" title="Sign in" id="t9z-NV-36a">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Next" id="xJG-28-bco">
+                            <connections>
+                                <action selector="nextButtonTapped:" destination="BYZ-38-t0r" id="Vfg-Vu-tNM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="Skg-Bl-qCH" id="rLi-20-WWf"/>
+                        <outlet property="nextButton" destination="xJG-28-bco" id="geN-uI-1Tl"/>
+                        <outlet property="numberTextField" destination="arz-2d-b4O" id="nh7-cc-YjW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="962" y="791"/>
+            <point key="canvasLocation" x="960.79999999999995" y="790.25487256371821"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IVG-Sn-hse">
@@ -71,6 +82,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="F9s-tw-ebk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.36041512036541146" green="0.49054805519593747" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
