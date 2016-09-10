@@ -42,7 +42,9 @@ class SPSignupViewController : UIViewController {
     
     @IBAction func nextButtonTapped(sender: AnyObject) {
         
-        
+        NSUserDefaults.standardUserDefaults().setObject(emailTextField.text, forKey: kDefaults_UserName)
+        NSUserDefaults.standardUserDefaults().setObject(emailTextField.text, forKey: kDefaults_MobileNumber)
+        NSUserDefaults.standardUserDefaults().synchronize()
         
     }
     

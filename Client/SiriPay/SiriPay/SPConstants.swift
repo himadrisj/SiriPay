@@ -54,3 +54,7 @@ let TEST_NETBAK_NAME = "ICICI Bank"
 
 let TEST_TOKENIZED_CARD_TOKEN = "d832babbbef60bd21b4c12a6cdb726cb"
 let TEST_TOKENIZED_CARD_CVV = "000"
+
+let kDefaults_UserName = "username"
+let kDefaults_MobileNumber = "number"
+
