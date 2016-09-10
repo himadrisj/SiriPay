@@ -51,3 +51,20 @@ class SPSignupViewController : UIViewController {
     
     
 }
+
+extension SPSignupViewController : UITextFieldDelegate {
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        
+        if textField.text?.characters.count == 9 {
+            nextButton.enabled = true
+        }
+        
+        return true
+    }
+    
+}
+
+
+
+
