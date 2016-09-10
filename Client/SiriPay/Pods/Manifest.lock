@@ -1,0 +1,18 @@
+PODS:
+  - Alamofire (3.5.0)
+  - CitrusPay (3.7.0):
+    - JSONModel
+  - JSONModel (1.4.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - CitrusPay (~> 3.7.0)
+
+SPEC CHECKSUMS:
+  Alamofire: b70a7352335f8ea5babd0a923eb7e8eacc67b877
+  CitrusPay: 1d3953aa414d51f35d8c37b22008897a38b59576
+  JSONModel: 58fe3f8c29ff95ed94e7ee7dde87e807f5da5371
+
+PODFILE CHECKSUM: b4883b99f966137d1226df31c6275ed8342b0e26
+
+COCOAPODS: 1.0.1
