@@ -78,5 +78,9 @@ class SPPaymentController {
     func doSignIn(otp otpString: String, completionHandler: ASCitrusSigninCallBack) {
         self.authLayer?.requestMasterLinkSignInWithPassword(otpString, passwordType: PasswordTypeOtp, completionHandler: completionHandler)
     }
+    
+    func sendPayment(to phoneNo: String, amount: String, message: String = "Enjoy!", completionHandler:ASMoneyTransferCallback) {
+        self.paymentLayer?.requestTransferMoneyTo(phoneNo, amount: amount, message: message, completionHandler: completionHandler)
+    }
 
 }
