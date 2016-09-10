@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yd1-fL-Xuq" userLabel="Email">
@@ -61,6 +61,7 @@
                         <barButtonItem key="rightBarButtonItem" enabled="NO" title="Next" id="xJG-28-bco">
                             <connections>
                                 <action selector="nextButtonTapped:" destination="BYZ-38-t0r" id="Vfg-Vu-tNM"/>
+                                <segue destination="sfe-u9-dg3" kind="show" id="l1l-qH-Clu"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -73,6 +74,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="960.79999999999995" y="790.25487256371821"/>
+        </scene>
+        <!--OTP-->
+        <scene sceneID="hp0-uf-TT3">
+            <objects>
+                <viewController id="sfe-u9-dg3" customClass="SPOTPViewController" customModule="SiriPay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rjh-r1-v6P"/>
+                        <viewControllerLayoutGuide type="bottom" id="aLN-eB-vi3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NmT-Fq-3WB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="btx-hT-ccL" userLabel="OTPField">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="Uiq-m1-r9Z"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="sfe-u9-dg3" id="s6J-av-rf1"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="btx-hT-ccL" firstAttribute="centerY" secondItem="NmT-Fq-3WB" secondAttribute="centerY" id="Nxp-9D-3NT"/>
+                            <constraint firstItem="btx-hT-ccL" firstAttribute="centerX" secondItem="NmT-Fq-3WB" secondAttribute="centerX" id="b0c-uB-npY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="OTP" id="WxS-TZ-f39">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Next" id="Wrz-hc-RNU"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nextButton" destination="Wrz-hc-RNU" id="S7A-hx-blf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SWa-tH-JUr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1755" y="791"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IVG-Sn-hse">

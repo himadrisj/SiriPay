@@ -46,6 +46,7 @@ class SPSignupViewController : UIViewController {
         NSUserDefaults.standardUserDefaults().setObject(emailTextField.text, forKey: kDefaults_MobileNumber)
         NSUserDefaults.standardUserDefaults().synchronize()
         
+        
     }
     
     
