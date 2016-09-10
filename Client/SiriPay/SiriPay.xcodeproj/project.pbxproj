@@ -7,100 +7,172 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9062D647FA4696B606878A2F /* Pods_SiriPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E3E87932D857E01BA7DC80 /* Pods_SiriPay.framework */; };
-		E57339451D84268800218CC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57339441D84268800218CC4 /* AppDelegate.swift */; };
-		E57339471D84268800218CC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57339461D84268800218CC4 /* ViewController.swift */; };
-		E573394A1D84268800218CC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E57339481D84268800218CC4 /* Main.storyboard */; };
-		E573394C1D84268800218CC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E573394B1D84268800218CC4 /* Assets.xcassets */; };
-		E573394F1D84268800218CC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E573394D1D84268800218CC4 /* LaunchScreen.storyboard */; };
+		E592F7A41D844189000D04F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F7A31D844189000D04F9 /* AppDelegate.swift */; };
+		E592F7A61D844189000D04F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F7A51D844189000D04F9 /* ViewController.swift */; };
+		E592F7A91D844189000D04F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E592F7A71D844189000D04F9 /* Main.storyboard */; };
+		E592F7AB1D844189000D04F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E592F7AA1D844189000D04F9 /* Assets.xcassets */; };
+		E592F7AE1D844189000D04F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E592F7AC1D844189000D04F9 /* LaunchScreen.storyboard */; };
+		E592F7B81D8441BC000D04F9 /* CitrusPay.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E592F7B61D8441BC000D04F9 /* CitrusPay.bundle */; };
+		E592F7B91D8441BC000D04F9 /* CitrusPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E592F7B71D8441BC000D04F9 /* CitrusPay.framework */; };
+		E592F7D11D84438F000D04F9 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E592F7BE1D84438F000D04F9 /* JSONModel.m */; };
+		E592F7D21D84438F000D04F9 /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = E592F7C01D84438F000D04F9 /* JSONModelClassProperty.m */; };
+		E592F7D31D84438F000D04F9 /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = E592F7C21D84438F000D04F9 /* JSONModelError.m */; };
+		E592F7D41D84438F000D04F9 /* JSONAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E592F7C61D84438F000D04F9 /* JSONAPI.m */; };
+		E592F7D51D84438F000D04F9 /* JSONHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E592F7C81D84438F000D04F9 /* JSONHTTPClient.m */; };
+		E592F7D61D84438F000D04F9 /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = E592F7CA1D84438F000D04F9 /* JSONModel+networking.m */; };
+		E592F7D71D84438F000D04F9 /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E592F7CD1D84438F000D04F9 /* JSONKeyMapper.m */; };
+		E592F7D81D84438F000D04F9 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E592F7CF1D84438F000D04F9 /* JSONValueTransformer.m */; };
+		E592F7DA1D84453E000D04F9 /* SPPaymentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F7D91D84453E000D04F9 /* SPPaymentController.swift */; };
+		E592F7DD1D84477A000D04F9 /* SPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F7DC1D84477A000D04F9 /* SPConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		54A2193BD0E858A224067F38 /* Pods-SiriPay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SiriPay.release.xcconfig"; path = "Pods/Target Support Files/Pods-SiriPay/Pods-SiriPay.release.xcconfig"; sourceTree = "<group>"; };
-		C6E3E87932D857E01BA7DC80 /* Pods_SiriPay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SiriPay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E57339411D84268800218CC4 /* SiriPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiriPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E57339441D84268800218CC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E57339461D84268800218CC4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E57339491D84268800218CC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E573394B1D84268800218CC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E573394E1D84268800218CC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E57339501D84268800218CC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EB53018531C797D43D1C28E9 /* Pods-SiriPay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SiriPay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SiriPay/Pods-SiriPay.debug.xcconfig"; sourceTree = "<group>"; };
+		E592F7A01D844189000D04F9 /* SiriPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiriPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E592F7A31D844189000D04F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E592F7A51D844189000D04F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E592F7A81D844189000D04F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E592F7AA1D844189000D04F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E592F7AD1D844189000D04F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E592F7AF1D844189000D04F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E592F7B61D8441BC000D04F9 /* CitrusPay.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CitrusPay.bundle; sourceTree = "<group>"; };
+		E592F7B71D8441BC000D04F9 /* CitrusPay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CitrusPay.framework; sourceTree = "<group>"; };
+		E592F7BA1D844217000D04F9 /* SiriPay-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SiriPay-Bridging-Header.h"; sourceTree = "<group>"; };
+		E592F7BD1D84438F000D04F9 /* JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModel.h; sourceTree = "<group>"; };
+		E592F7BE1D84438F000D04F9 /* JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModel.m; sourceTree = "<group>"; };
+		E592F7BF1D84438F000D04F9 /* JSONModelClassProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelClassProperty.h; sourceTree = "<group>"; };
+		E592F7C01D84438F000D04F9 /* JSONModelClassProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelClassProperty.m; sourceTree = "<group>"; };
+		E592F7C11D84438F000D04F9 /* JSONModelError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelError.h; sourceTree = "<group>"; };
+		E592F7C21D84438F000D04F9 /* JSONModelError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelError.m; sourceTree = "<group>"; };
+		E592F7C31D84438F000D04F9 /* JSONModelLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelLib.h; sourceTree = "<group>"; };
+		E592F7C51D84438F000D04F9 /* JSONAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONAPI.h; sourceTree = "<group>"; };
+		E592F7C61D84438F000D04F9 /* JSONAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONAPI.m; sourceTree = "<group>"; };
+		E592F7C71D84438F000D04F9 /* JSONHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONHTTPClient.h; sourceTree = "<group>"; };
+		E592F7C81D84438F000D04F9 /* JSONHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONHTTPClient.m; sourceTree = "<group>"; };
+		E592F7C91D84438F000D04F9 /* JSONModel+networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONModel+networking.h"; sourceTree = "<group>"; };
+		E592F7CA1D84438F000D04F9 /* JSONModel+networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONModel+networking.m"; sourceTree = "<group>"; };
+		E592F7CC1D84438F000D04F9 /* JSONKeyMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKeyMapper.h; sourceTree = "<group>"; };
+		E592F7CD1D84438F000D04F9 /* JSONKeyMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKeyMapper.m; sourceTree = "<group>"; };
+		E592F7CE1D84438F000D04F9 /* JSONValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONValueTransformer.h; sourceTree = "<group>"; };
+		E592F7CF1D84438F000D04F9 /* JSONValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONValueTransformer.m; sourceTree = "<group>"; };
+		E592F7D01D84438F000D04F9 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		E592F7D91D84453E000D04F9 /* SPPaymentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPPaymentController.swift; sourceTree = "<group>"; };
+		E592F7DC1D84477A000D04F9 /* SPConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E573393E1D84268800218CC4 /* Frameworks */ = {
+		E592F79D1D844189000D04F9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9062D647FA4696B606878A2F /* Pods_SiriPay.framework in Frameworks */,
+				E592F7B91D8441BC000D04F9 /* CitrusPay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		42F8B325F250B9FF5507EA1F /* Frameworks */ = {
+		E592F7971D844189000D04F9 = {
 			isa = PBXGroup;
 			children = (
-				C6E3E87932D857E01BA7DC80 /* Pods_SiriPay.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E57339381D84268800218CC4 = {
-			isa = PBXGroup;
-			children = (
-				E57339431D84268800218CC4 /* SiriPay */,
-				E57339421D84268800218CC4 /* Products */,
-				E984463E2F6F3340F079B8AA /* Pods */,
-				42F8B325F250B9FF5507EA1F /* Frameworks */,
+				E592F7BA1D844217000D04F9 /* SiriPay-Bridging-Header.h */,
+				E592F7BB1D84438F000D04F9 /* JSONModel */,
+				E592F7B51D8441BC000D04F9 /* CitrusPaySDK */,
+				E592F7A21D844189000D04F9 /* SiriPay */,
+				E592F7A11D844189000D04F9 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		E57339421D84268800218CC4 /* Products */ = {
+		E592F7A11D844189000D04F9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E57339411D84268800218CC4 /* SiriPay.app */,
+				E592F7A01D844189000D04F9 /* SiriPay.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E57339431D84268800218CC4 /* SiriPay */ = {
+		E592F7A21D844189000D04F9 /* SiriPay */ = {
 			isa = PBXGroup;
 			children = (
-				E57339441D84268800218CC4 /* AppDelegate.swift */,
-				E57339461D84268800218CC4 /* ViewController.swift */,
-				E57339481D84268800218CC4 /* Main.storyboard */,
-				E573394B1D84268800218CC4 /* Assets.xcassets */,
-				E573394D1D84268800218CC4 /* LaunchScreen.storyboard */,
-				E57339501D84268800218CC4 /* Info.plist */,
+				E592F7A31D844189000D04F9 /* AppDelegate.swift */,
+				E592F7A51D844189000D04F9 /* ViewController.swift */,
+				E592F7D91D84453E000D04F9 /* SPPaymentController.swift */,
+				E592F7DC1D84477A000D04F9 /* SPConstants.swift */,
+				E592F7A71D844189000D04F9 /* Main.storyboard */,
+				E592F7AA1D844189000D04F9 /* Assets.xcassets */,
+				E592F7AC1D844189000D04F9 /* LaunchScreen.storyboard */,
+				E592F7AF1D844189000D04F9 /* Info.plist */,
 			);
 			path = SiriPay;
 			sourceTree = "<group>";
 		};
-		E984463E2F6F3340F079B8AA /* Pods */ = {
+		E592F7B51D8441BC000D04F9 /* CitrusPaySDK */ = {
 			isa = PBXGroup;
 			children = (
-				EB53018531C797D43D1C28E9 /* Pods-SiriPay.debug.xcconfig */,
-				54A2193BD0E858A224067F38 /* Pods-SiriPay.release.xcconfig */,
+				E592F7B61D8441BC000D04F9 /* CitrusPay.bundle */,
+				E592F7B71D8441BC000D04F9 /* CitrusPay.framework */,
 			);
-			name = Pods;
+			path = CitrusPaySDK;
+			sourceTree = "<group>";
+		};
+		E592F7BB1D84438F000D04F9 /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				E592F7BC1D84438F000D04F9 /* JSONModel */,
+				E592F7C31D84438F000D04F9 /* JSONModelLib.h */,
+				E592F7C41D84438F000D04F9 /* JSONModelNetworking */,
+				E592F7CB1D84438F000D04F9 /* JSONModelTransformations */,
+				E592F7D01D84438F000D04F9 /* module.modulemap */,
+			);
+			path = JSONModel;
+			sourceTree = "<group>";
+		};
+		E592F7BC1D84438F000D04F9 /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				E592F7BD1D84438F000D04F9 /* JSONModel.h */,
+				E592F7BE1D84438F000D04F9 /* JSONModel.m */,
+				E592F7BF1D84438F000D04F9 /* JSONModelClassProperty.h */,
+				E592F7C01D84438F000D04F9 /* JSONModelClassProperty.m */,
+				E592F7C11D84438F000D04F9 /* JSONModelError.h */,
+				E592F7C21D84438F000D04F9 /* JSONModelError.m */,
+			);
+			path = JSONModel;
+			sourceTree = "<group>";
+		};
+		E592F7C41D84438F000D04F9 /* JSONModelNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				E592F7C51D84438F000D04F9 /* JSONAPI.h */,
+				E592F7C61D84438F000D04F9 /* JSONAPI.m */,
+				E592F7C71D84438F000D04F9 /* JSONHTTPClient.h */,
+				E592F7C81D84438F000D04F9 /* JSONHTTPClient.m */,
+				E592F7C91D84438F000D04F9 /* JSONModel+networking.h */,
+				E592F7CA1D84438F000D04F9 /* JSONModel+networking.m */,
+			);
+			path = JSONModelNetworking;
+			sourceTree = "<group>";
+		};
+		E592F7CB1D84438F000D04F9 /* JSONModelTransformations */ = {
+			isa = PBXGroup;
+			children = (
+				E592F7CC1D84438F000D04F9 /* JSONKeyMapper.h */,
+				E592F7CD1D84438F000D04F9 /* JSONKeyMapper.m */,
+				E592F7CE1D84438F000D04F9 /* JSONValueTransformer.h */,
+				E592F7CF1D84438F000D04F9 /* JSONValueTransformer.m */,
+			);
+			path = JSONModelTransformations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E57339401D84268800218CC4 /* SiriPay */ = {
+		E592F79F1D844189000D04F9 /* SiriPay */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E57339531D84268800218CC4 /* Build configuration list for PBXNativeTarget "SiriPay" */;
+			buildConfigurationList = E592F7B21D844189000D04F9 /* Build configuration list for PBXNativeTarget "SiriPay" */;
 			buildPhases = (
-				0566EE7544675414CD31B8F1 /* [CP] Check Pods Manifest.lock */,
-				E573393D1D84268800218CC4 /* Sources */,
-				E573393E1D84268800218CC4 /* Frameworks */,
-				E573393F1D84268800218CC4 /* Resources */,
-				A4E72C423C0D8C9C2CB50C97 /* [CP] Embed Pods Frameworks */,
-				79C3A45CED3565AF4B41B2D2 /* [CP] Copy Pods Resources */,
+				E592F79C1D844189000D04F9 /* Sources */,
+				E592F79D1D844189000D04F9 /* Frameworks */,
+				E592F79E1D844189000D04F9 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -108,27 +180,27 @@
 			);
 			name = SiriPay;
 			productName = SiriPay;
-			productReference = E57339411D84268800218CC4 /* SiriPay.app */;
+			productReference = E592F7A01D844189000D04F9 /* SiriPay.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		E57339391D84268800218CC4 /* Project object */ = {
+		E592F7981D844189000D04F9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "PhonePe Internet Private Limited";
 				TargetAttributes = {
-					E57339401D84268800218CC4 = {
+					E592F79F1D844189000D04F9 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 9GW78CXC2W;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = E573393C1D84268800218CC4 /* Build configuration list for PBXProject "SiriPay" */;
+			buildConfigurationList = E592F79B1D844189000D04F9 /* Build configuration list for PBXProject "SiriPay" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -136,102 +208,65 @@
 				en,
 				Base,
 			);
-			mainGroup = E57339381D84268800218CC4;
-			productRefGroup = E57339421D84268800218CC4 /* Products */;
+			mainGroup = E592F7971D844189000D04F9;
+			productRefGroup = E592F7A11D844189000D04F9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E57339401D84268800218CC4 /* SiriPay */,
+				E592F79F1D844189000D04F9 /* SiriPay */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E573393F1D84268800218CC4 /* Resources */ = {
+		E592F79E1D844189000D04F9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E573394F1D84268800218CC4 /* LaunchScreen.storyboard in Resources */,
-				E573394C1D84268800218CC4 /* Assets.xcassets in Resources */,
-				E573394A1D84268800218CC4 /* Main.storyboard in Resources */,
+				E592F7B81D8441BC000D04F9 /* CitrusPay.bundle in Resources */,
+				E592F7AE1D844189000D04F9 /* LaunchScreen.storyboard in Resources */,
+				E592F7AB1D844189000D04F9 /* Assets.xcassets in Resources */,
+				E592F7A91D844189000D04F9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		0566EE7544675414CD31B8F1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		79C3A45CED3565AF4B41B2D2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SiriPay/Pods-SiriPay-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A4E72C423C0D8C9C2CB50C97 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SiriPay/Pods-SiriPay-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		E573393D1D84268800218CC4 /* Sources */ = {
+		E592F79C1D844189000D04F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E57339471D84268800218CC4 /* ViewController.swift in Sources */,
-				E57339451D84268800218CC4 /* AppDelegate.swift in Sources */,
+				E592F7DA1D84453E000D04F9 /* SPPaymentController.swift in Sources */,
+				E592F7D51D84438F000D04F9 /* JSONHTTPClient.m in Sources */,
+				E592F7D11D84438F000D04F9 /* JSONModel.m in Sources */,
+				E592F7D21D84438F000D04F9 /* JSONModelClassProperty.m in Sources */,
+				E592F7D81D84438F000D04F9 /* JSONValueTransformer.m in Sources */,
+				E592F7D71D84438F000D04F9 /* JSONKeyMapper.m in Sources */,
+				E592F7D41D84438F000D04F9 /* JSONAPI.m in Sources */,
+				E592F7A61D844189000D04F9 /* ViewController.swift in Sources */,
+				E592F7DD1D84477A000D04F9 /* SPConstants.swift in Sources */,
+				E592F7D31D84438F000D04F9 /* JSONModelError.m in Sources */,
+				E592F7A41D844189000D04F9 /* AppDelegate.swift in Sources */,
+				E592F7D61D84438F000D04F9 /* JSONModel+networking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E57339481D84268800218CC4 /* Main.storyboard */ = {
+		E592F7A71D844189000D04F9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E57339491D84268800218CC4 /* Base */,
+				E592F7A81D844189000D04F9 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		E573394D1D84268800218CC4 /* LaunchScreen.storyboard */ = {
+		E592F7AC1D844189000D04F9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E573394E1D84268800218CC4 /* Base */,
+				E592F7AD1D844189000D04F9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -239,7 +274,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		E57339511D84268800218CC4 /* Debug */ = {
+		E592F7B01D844189000D04F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -288,7 +323,7 @@
 			};
 			name = Debug;
 		};
-		E57339521D84268800218CC4 /* Release */ = {
+		E592F7B11D844189000D04F9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -330,30 +365,38 @@
 			};
 			name = Release;
 		};
-		E57339541D84268800218CC4 /* Debug */ = {
+		E592F7B31D844189000D04F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB53018531C797D43D1C28E9 /* Pods-SiriPay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9GW78CXC2W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CitrusPaySDK",
+				);
 				INFOPLIST_FILE = SiriPay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.phonepe.SiriPay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SiriPay-Bridging-Header.h";
 				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
-		E57339551D84268800218CC4 /* Release */ = {
+		E592F7B41D844189000D04F9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 54A2193BD0E858A224067F38 /* Pods-SiriPay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9GW78CXC2W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CitrusPaySDK",
+				);
 				INFOPLIST_FILE = SiriPay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.phonepe.SiriPay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SiriPay-Bridging-Header.h";
 				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
@@ -361,25 +404,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E573393C1D84268800218CC4 /* Build configuration list for PBXProject "SiriPay" */ = {
+		E592F79B1D844189000D04F9 /* Build configuration list for PBXProject "SiriPay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E57339511D84268800218CC4 /* Debug */,
-				E57339521D84268800218CC4 /* Release */,
+				E592F7B01D844189000D04F9 /* Debug */,
+				E592F7B11D844189000D04F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E57339531D84268800218CC4 /* Build configuration list for PBXNativeTarget "SiriPay" */ = {
+		E592F7B21D844189000D04F9 /* Build configuration list for PBXNativeTarget "SiriPay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E57339541D84268800218CC4 /* Debug */,
-				E57339551D84268800218CC4 /* Release */,
+				E592F7B31D844189000D04F9 /* Debug */,
+				E592F7B41D844189000D04F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = E57339391D84268800218CC4 /* Project object */;
+	rootObject = E592F7981D844189000D04F9 /* Project object */;
 }
