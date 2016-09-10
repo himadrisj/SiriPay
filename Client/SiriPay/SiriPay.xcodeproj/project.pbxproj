@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91317F001D8465E900B6163B /* SPSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91317EFF1D8465E900B6163B /* SPSignupViewController.swift */; };
+		917019601D846EB000E98B9D /* SPOTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9170195F1D846EB000E98B9D /* SPOTPViewController.swift */; };
+		917019621D84773F00E98B9D /* SPMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917019611D84773F00E98B9D /* SPMainViewController.swift */; };
 		E592F7A41D844189000D04F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F7A31D844189000D04F9 /* AppDelegate.swift */; };
 		E592F7A61D844189000D04F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F7A51D844189000D04F9 /* ViewController.swift */; };
 		E592F7A91D844189000D04F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E592F7A71D844189000D04F9 /* Main.storyboard */; };
@@ -27,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		91317EFF1D8465E900B6163B /* SPSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPSignupViewController.swift; sourceTree = "<group>"; };
+		9170195F1D846EB000E98B9D /* SPOTPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPOTPViewController.swift; sourceTree = "<group>"; };
+		917019611D84773F00E98B9D /* SPMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPMainViewController.swift; sourceTree = "<group>"; };
 		E592F7A01D844189000D04F9 /* SiriPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiriPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E592F7A31D844189000D04F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E592F7A51D844189000D04F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +77,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		91317EFE1D8465D200B6163B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				91317EFF1D8465E900B6163B /* SPSignupViewController.swift */,
+				9170195F1D846EB000E98B9D /* SPOTPViewController.swift */,
+				917019611D84773F00E98B9D /* SPMainViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		E592F7971D844189000D04F9 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +109,7 @@
 		E592F7A21D844189000D04F9 /* SiriPay */ = {
 			isa = PBXGroup;
 			children = (
+				91317EFE1D8465D200B6163B /* View Controllers */,
 				E592F7A31D844189000D04F9 /* AppDelegate.swift */,
 				E592F7A51D844189000D04F9 /* ViewController.swift */,
 				E592F7D91D84453E000D04F9 /* SPPaymentController.swift */,
@@ -195,7 +212,7 @@
 				TargetAttributes = {
 					E592F79F1D844189000D04F9 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 9GW78CXC2W;
+						DevelopmentTeam = UYM8YWQ6RW;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -241,11 +258,14 @@
 				E592F7D51D84438F000D04F9 /* JSONHTTPClient.m in Sources */,
 				E592F7D11D84438F000D04F9 /* JSONModel.m in Sources */,
 				E592F7D21D84438F000D04F9 /* JSONModelClassProperty.m in Sources */,
+				917019621D84773F00E98B9D /* SPMainViewController.swift in Sources */,
 				E592F7D81D84438F000D04F9 /* JSONValueTransformer.m in Sources */,
 				E592F7D71D84438F000D04F9 /* JSONKeyMapper.m in Sources */,
 				E592F7D41D84438F000D04F9 /* JSONAPI.m in Sources */,
+				917019601D846EB000E98B9D /* SPOTPViewController.swift in Sources */,
 				E592F7A61D844189000D04F9 /* ViewController.swift in Sources */,
 				E592F7DD1D84477A000D04F9 /* SPConstants.swift in Sources */,
+				91317F001D8465E900B6163B /* SPSignupViewController.swift in Sources */,
 				E592F7D31D84438F000D04F9 /* JSONModelError.m in Sources */,
 				E592F7A41D844189000D04F9 /* AppDelegate.swift in Sources */,
 				E592F7D61D84438F000D04F9 /* JSONModel+networking.m in Sources */,
@@ -369,7 +389,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9GW78CXC2W;
+				DEVELOPMENT_TEAM = UYM8YWQ6RW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CitrusPaySDK",
@@ -387,7 +407,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9GW78CXC2W;
+				DEVELOPMENT_TEAM = UYM8YWQ6RW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CitrusPaySDK",
