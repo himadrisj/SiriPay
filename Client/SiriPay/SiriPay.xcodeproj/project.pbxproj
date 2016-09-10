@@ -23,6 +23,7 @@
 		E592F7D71D84438F000D04F9 /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E592F7CD1D84438F000D04F9 /* JSONKeyMapper.m */; };
 		E592F7D81D84438F000D04F9 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E592F7CF1D84438F000D04F9 /* JSONValueTransformer.m */; };
 		E592F7DA1D84453E000D04F9 /* SPPaymentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F7D91D84453E000D04F9 /* SPPaymentController.swift */; };
+		E592F7DD1D84477A000D04F9 /* SPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F7DC1D84477A000D04F9 /* SPConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		E592F7CF1D84438F000D04F9 /* JSONValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONValueTransformer.m; sourceTree = "<group>"; };
 		E592F7D01D84438F000D04F9 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		E592F7D91D84453E000D04F9 /* SPPaymentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPPaymentController.swift; sourceTree = "<group>"; };
+		E592F7DC1D84477A000D04F9 /* SPConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				E592F7A31D844189000D04F9 /* AppDelegate.swift */,
 				E592F7A51D844189000D04F9 /* ViewController.swift */,
 				E592F7D91D84453E000D04F9 /* SPPaymentController.swift */,
+				E592F7DC1D84477A000D04F9 /* SPConstants.swift */,
 				E592F7A71D844189000D04F9 /* Main.storyboard */,
 				E592F7AA1D844189000D04F9 /* Assets.xcassets */,
 				E592F7AC1D844189000D04F9 /* LaunchScreen.storyboard */,
@@ -242,6 +245,7 @@
 				E592F7D71D84438F000D04F9 /* JSONKeyMapper.m in Sources */,
 				E592F7D41D84438F000D04F9 /* JSONAPI.m in Sources */,
 				E592F7A61D844189000D04F9 /* ViewController.swift in Sources */,
+				E592F7DD1D84477A000D04F9 /* SPConstants.swift in Sources */,
 				E592F7D31D84438F000D04F9 /* JSONModelError.m in Sources */,
 				E592F7A41D844189000D04F9 /* AppDelegate.swift in Sources */,
 				E592F7D61D84438F000D04F9 /* JSONModel+networking.m in Sources */,
@@ -375,7 +379,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.phonepe.SiriPay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SiriPay-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -393,7 +397,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.phonepe.SiriPay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SiriPay-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
