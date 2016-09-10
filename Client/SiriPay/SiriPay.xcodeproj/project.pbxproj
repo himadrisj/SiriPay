@@ -195,7 +195,7 @@
 				TargetAttributes = {
 					E592F79F1D844189000D04F9 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 9GW78CXC2W;
+						DevelopmentTeam = UYM8YWQ6RW;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -369,7 +369,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9GW78CXC2W;
+				DEVELOPMENT_TEAM = UYM8YWQ6RW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CitrusPaySDK",
@@ -387,7 +387,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9GW78CXC2W;
+				DEVELOPMENT_TEAM = UYM8YWQ6RW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CitrusPaySDK",
