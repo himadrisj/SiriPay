@@ -54,9 +54,9 @@ class IntentHandler: INExtension, INSendPaymentIntentHandling {
             payInfo["phone"] = phoneNo
             payInfo["amount"] = String(intAmount)
             
-//            let defaults = UserDefaults(suiteName: "group.com.phonepe.ezpay")
-//            defaults?.set(payInfo, forKey: payInfoUserDefaultsKey)
-//            defaults?.synchronize()
+            let defaults = UserDefaults(suiteName: "group.com.phonepe.ezpay")
+            defaults?.set(payInfo, forKey: payInfoUserDefaultsKey)
+            defaults?.synchronize()
             
             response = INSendPaymentIntentResponse(code: .success, userActivity: userActivity)
             
