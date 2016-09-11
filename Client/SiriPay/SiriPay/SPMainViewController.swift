@@ -22,4 +22,8 @@ class SPMainViewController: UIViewController {
         
     }
     
+    override func viewDidLoad() {
+        //INPreferences.
+    }
+    
 }

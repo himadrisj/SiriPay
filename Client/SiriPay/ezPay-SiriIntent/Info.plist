@@ -8,6 +8,8 @@
 	<string>ezPay-SiriIntent</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
+	<key>NSSiriUsageDescription</key>
+	<string>You can pay via Siri</string>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -25,12 +27,12 @@
 		<key>NSExtensionAttributes</key>
 		<dict>
 			<key>IntentsRestrictedWhileLocked</key>
-			<array/>
+			<array>
+				<string>INSendPaymentIntent</string>
+			</array>
 			<key>IntentsSupported</key>
 			<array>
-				<string>INSendMessageIntent</string>
-				<string>INSearchForMessagesIntent</string>
-				<string>INSetMessageAttributeIntent</string>
+				<string>INSendPaymentIntent</string>
 			</array>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
