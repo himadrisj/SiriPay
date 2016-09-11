@@ -8,6 +8,7 @@
 
 import Intents
 
+
 // As an example, this class is set up to handle Message intents.
 // You will want to replace this or add other intents as appropriate.
 // The intents you wish to handle must be declared in the extension's Info.plist.
@@ -41,17 +42,26 @@ class IntentHandler: INExtension, INSendPaymentIntentHandling {
      */
     public func handle(sendPayment intent: INSendPaymentIntent, completion: @escaping (INSendPaymentIntentResponse) -> Swift.Void) {
         // Implement your application logic for payment here.
-        var phoneNo = "9742048795"
-        if(intent.payee?.displayName.caseInsensitiveCompare("Jatin") == .orderedSame) {
-            phoneNo = "9711165687"
+        var thePhoneNO = "9886957281" //"9711165687" //"9742048795"
+        
+        let defaults = UserDefaults(suiteName: "group.com.phonepe.ezpay")
+        if let contactDict = defaults?.object(forKey: contactsSharedKey) as? [String: String] {
+            if let lowerCaseName = intent.payee?.displayName.lowercased() {
+                if let phNo = contactDict[lowerCaseName] {
+                    thePhoneNO = phNo
+                }
+            }
         }
+//        if(intent.payee?.displayName.caseInsensitiveCompare("Jatin") == .orderedSame) {
+//            phoneNo = "9711165687"
+//        }
         
         let userActivity = NSUserActivity(activityType: NSStringFromClass(INSendPaymentIntent.self))
         var response = INSendPaymentIntentResponse(code: .failure, userActivity: userActivity)
         
         if let intAmount = intent.currencyAmount?.amount?.intValue {
             var payInfo = [String:String]()
-            payInfo["phone"] = phoneNo
+            payInfo["phone"] = thePhoneNO
             payInfo["amount"] = String(intAmount)
             
             let defaults = UserDefaults(suiteName: "group.com.phonepe.ezpay")
@@ -115,6 +125,7 @@ class IntentHandler: INExtension, INSendPaymentIntentHandling {
      
      */
     public func resolvePayee(forSendPayment intent: INSendPaymentIntent, with completion: @escaping (INPersonResolutionResult) -> Swift.Void) {
+        
         guard let payee = intent.payee else {
             completion(INPersonResolutionResult.needsValue())
             return
@@ -127,9 +138,19 @@ class IntentHandler: INExtension, INSendPaymentIntentHandling {
 //            }
 //        }
         
-        if (payee.displayName.caseInsensitiveCompare("om") == .orderedSame ||  payee.displayName.caseInsensitiveCompare("jatin") == .orderedSame) {
-            completion(INPersonResolutionResult.success(with: payee))
+        let defaults = UserDefaults(suiteName: "group.com.phonepe.ezpay")
+        if let contactDict = defaults?.object(forKey: contactsSharedKey) as? [String: String] {
+            if(contactDict[payee.displayName.lowercased()]?.characters.count == 10) {
+                completion(INPersonResolutionResult.success(with: payee))
+                return
+            }
         }
+        
+        
+        
+//        if (payee.displayName.caseInsensitiveCompare("om") == .orderedSame ||  payee.displayName.caseInsensitiveCompare("jatin") == .orderedSame) {
+//            completion(INPersonResolutionResult.success(with: payee))
+//        }
         
         completion(INPersonResolutionResult.disambiguation(with: [payee]))
     }

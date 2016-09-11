@@ -8,6 +8,7 @@
 
 import Foundation
 import Intents
+import Contacts
 
 class SPMainViewController: UIViewController {
     
@@ -28,6 +29,8 @@ class SPMainViewController: UIViewController {
             status in
             print("Siri Auth Status is \(status)")
         }
+        
+        syncContacts()
         
         Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true, block: {
             timer in
@@ -55,4 +58,45 @@ class SPMainViewController: UIViewController {
         })
     }
     
+    
+    
+    func syncContacts() {
+        let store = CNContactStore()
+        //let keys: [CNKeyDescriptor] = [CNContactGivenNameKey, CNContactPhoneNumbersKey]
+        let keysToFetch: [CNKeyDescriptor] = [CNContactPhoneNumbersKey as CNKeyDescriptor, CNContactGivenNameKey as CNKeyDescriptor]
+        let request = CNContactFetchRequest(keysToFetch: keysToFetch)
+        var contactsDict = [String: String]()
+        
+        do {
+            try store.enumerateContacts(with: request) {
+                contact, stop in
+                print("Contact is \(contact)")
+                
+                let value = contact.phoneNumbers.first?.value.stringValue
+                let phoneNo = value?.stringByRemovingWhitespaces
+                contactsDict[contact.givenName.lowercased()] = phoneNo
+            }
+        } catch {
+            print("Something went wrong!")
+        }
+        
+        
+        print(contactsDict)
+        
+        let defaults = UserDefaults(suiteName: "group.com.phonepe.ezpay")
+        defaults?.set(contactsDict, forKey: contactsSharedKey)
+        defaults?.synchronize()
+    }
+    
 }
+
+
+extension String {
+    
+    var stringByRemovingWhitespaces: String {
+        
+        let components = self.components(separatedBy: .whitespaces)
+        return components.joined(separator: "")
+    }
+}
+
