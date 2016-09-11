@@ -28,7 +28,7 @@ class SPPaymentController {
         keyStore.signUpId = SubscriptionId
         keyStore.signUpSecret = SubscriptionSecretKey
         keyStore.vanity = VanityUrl
-        CitrusPaymentSDK.initializeWithKeyStore(keyStore, environment: CTSEnvProduction)
+        CitrusPaymentSDK.initialize(with: keyStore, environment: CTSEnvProduction)
         
         //        #if PRODUCTION_MODE
         //            CitrusPaymentSDK.initializeWithKeyStore(keyStore, environment: CTSEnvProduction)
@@ -41,11 +41,11 @@ class SPPaymentController {
         
         CitrusPaymentSDK.enableLoader()
         
-        CitrusPaymentSDK.setLoaderColor(UIColor .orangeColor())
+        CitrusPaymentSDK.setLoaderColor(UIColor.orange)
         
-        self.authLayer = CTSAuthLayer.fetchSharedAuthLayer()
-        self.profileLayer = CTSProfileLayer.fetchSharedProfileLayer()
-        self.paymentLayer = CTSPaymentLayer.fetchSharedPaymentLayer()
+        self.authLayer = CTSAuthLayer.fetchShared()
+        self.profileLayer = CTSProfileLayer.fetchShared()
+        self.paymentLayer = CTSPaymentLayer.fetchShared()
         
         
         contactInfo?.firstName = TEST_FIRST_NAME;
@@ -60,27 +60,27 @@ class SPPaymentController {
         addressInfo?.street2 = TEST_STREET2;
         addressInfo?.zip = TEST_ZIP;
         
-        customParams = ["USERDATA2":"MOB_RC|9988776655",
-                        "USERDATA10":"test",
-                        "USERDATA4":"MOB_RC|test@gmail.com",
-                        "USERDATA3":"MOB_RC|4111XXXXXXXX1111"]
+        customParams = ["USERDATA2":"MOB_RC|9988776655" as AnyObject,
+                        "USERDATA10":"test" as AnyObject,
+                        "USERDATA4":"MOB_RC|test@gmail.com" as AnyObject,
+                        "USERDATA3":"MOB_RC|4111XXXXXXXX1111" as AnyObject]
         
     }
     
     
-    func requestOTPForSignIn(email emailString: String, mobileNo mobileNoString: String, completionHandler:ASMasterLinkCallback)  {
+    func requestOTPForSignIn(email emailString: String, mobileNo mobileNoString: String, completionHandler:@escaping ASMasterLinkCallback)  {
         self.authLayer?.requestMasterLink(emailString,
                                           mobile: mobileNoString,
                                           scope:CTSWalletScopeFull,
                                           completionHandler: completionHandler)
     }
     
-    func doSignIn(otp otpString: String, completionHandler: ASCitrusSigninCallBack) {
-        self.authLayer?.requestMasterLinkSignInWithPassword(otpString, passwordType: PasswordTypeOtp, completionHandler: completionHandler)
+    func doSignIn(otp otpString: String, completionHandler: @escaping ASCitrusSigninCallBack) {
+        self.authLayer?.requestMasterLinkSignIn(withPassword: otpString, passwordType: PasswordTypeOtp, completionHandler: completionHandler)
     }
     
-    func sendPayment(to phoneNo: String, amount: String, message: String = "Enjoy!", completionHandler:ASMoneyTransferCallback) {
-        self.paymentLayer?.requestTransferMoneyTo(phoneNo, amount: amount, message: message, completionHandler: completionHandler)
+    func sendPayment(to phoneNo: String, amount: String, message: String = "Enjoy!", completionHandler:@escaping ASMoneyTransferCallback) {
+        self.paymentLayer?.requestTransferMoney(to: phoneNo, amount: amount, message: message, completionHandler: completionHandler)
     }
 
 }
