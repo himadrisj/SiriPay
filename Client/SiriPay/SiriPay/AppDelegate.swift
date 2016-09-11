@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let contactStore = CNContactStore()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
-                
+        SPPaymentController.sharedInstance.initializeSDK()
         return true
     }
     
