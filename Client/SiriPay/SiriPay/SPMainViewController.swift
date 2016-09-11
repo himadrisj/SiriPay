@@ -10,13 +10,13 @@ import Foundation
 
 class SPMainViewController: UIViewController {
     
-    @IBAction func sendButtonPressed(sender: AnyObject) {
+    @IBAction func sendButtonPressed(_ sender: AnyObject) {
         
         //Send money here
         
     }
     
-    @IBAction func receiveButtonPressed(sender: AnyObject) {
+    @IBAction func receiveButtonPressed(_ sender: AnyObject) {
         
         //Receive money here
         

@@ -31,38 +31,38 @@ class SPSignupViewController : UIViewController {
         emailID = emailTextField.text
         number = numberTextField.text
         
-        if let emailID = emailID where emailID.characters.count > 0 {
+        if let emailID = emailID , emailID.characters.count > 0 {
             
-            if let number = number where number.characters.count > 0 {
-                nextButton.enabled = true
+            if let number = number , number.characters.count > 0 {
+                nextButton.isEnabled = true
             }
             
         }
     }
     
     
-    @IBAction func nextButtonTapped(sender: AnyObject) {
+    @IBAction func nextButtonTapped(_ sender: AnyObject) {
         
-        NSUserDefaults.standardUserDefaults().setObject(TEST_EMAIL, forKey: kDefaults_UserName)
-        NSUserDefaults.standardUserDefaults().setObject(TEST_MOBILE, forKey: kDefaults_MobileNumber)
-        NSUserDefaults.standardUserDefaults().synchronize()
+        UserDefaults.standard.set(TEST_EMAIL, forKey: kDefaults_UserName)
+        UserDefaults.standard.set(TEST_MOBILE, forKey: kDefaults_MobileNumber)
+        UserDefaults.standard.synchronize()
         
         SPPaymentController.sharedInstance.requestOTPForSignIn(email: TEST_EMAIL,
                                                                mobileNo: TEST_MOBILE) { (result, error) in
                                                                 
                                                                 if let _ = error {
                                                                     print("Error while signing in = \(error)")
-                                                                    let alert = UIAlertController(title: "Wrong username or password", message:"Please try again", preferredStyle: UIAlertControllerStyle.Alert)
+                                                                    let alert = UIAlertController(title: "Wrong username or password", message:"Please try again", preferredStyle: UIAlertControllerStyle.alert)
                                                                     
-                                                                    let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: nil)
+                                                                    let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.cancel, handler: nil)
                                                                     
                                                                     alert.addAction(okAction)
-                                                                    self.presentViewController(alert, animated: true, completion: nil)
+                                                                    self.present(alert, animated: true, completion: nil)
                                                                     
                                                                     
                                                                 } else {
                                                                     
-                                                                    self.performSegueWithIdentifier("OTPSegueIdentifier", sender: result.userMessage)
+                                                                    self.performSegue(withIdentifier: "OTPSegueIdentifier", sender: result?.userMessage)
                                                                     
                                                                 }
                                                                 
@@ -74,10 +74,10 @@ class SPSignupViewController : UIViewController {
 
 extension SPSignupViewController : UITextFieldDelegate {
     
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         if textField.text?.characters.count == 9 {
-            nextButton.enabled = true
+            nextButton.isEnabled = true
         }
         
         return true
