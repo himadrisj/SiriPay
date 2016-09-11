@@ -68,18 +68,18 @@ class SPPaymentController {
     }
     
     
-    func requestOTPForSignIn(email emailString: String, mobileNo mobileNoString: String, completionHandler:ASMasterLinkCallback)  {
+    func requestOTPForSignIn(email emailString: String, mobileNo mobileNoString: String, completionHandler:@escaping ASMasterLinkCallback)  {
         self.authLayer?.requestMasterLink(emailString,
                                           mobile: mobileNoString,
                                           scope:CTSWalletScopeFull,
                                           completionHandler: completionHandler)
     }
     
-    func doSignIn(otp otpString: String, completionHandler : ASCitrusSigninCallBack) {
+    func doSignIn(otp otpString: String, completionHandler : @escaping ASCitrusSigninCallBack) {
         self.authLayer?.requestMasterLinkSignIn(withPassword: otpString, passwordType: PasswordTypeOtp, completionHandler: completionHandler)
     }
     
-    func sendPayment(to phoneNo: String, amount: String, message: String = "Enjoy!", completionHandler:ASMoneyTransferCallback) {
+    func sendPayment(to phoneNo: String, amount: String, message: String = "Enjoy!", completionHandler:@escaping ASMoneyTransferCallback) {
         self.paymentLayer?.requestTransferMoney(to: phoneNo, amount: amount, message: message, completionHandler: completionHandler)
     }
 

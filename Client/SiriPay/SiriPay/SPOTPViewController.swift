@@ -17,10 +17,11 @@ class SPOTPViewController : UIViewController {
     @IBOutlet weak var otpField: UITextField!
     
     override func viewDidLoad() {
-        
-        SPPaymentController.sharedInstance.requestOTPForSignIn(email: TEST_EMAIL,
+        if (!UserDefaults.standard.bool(forKey: kDefaults_SignedIn)) {
+            SPPaymentController.sharedInstance.requestOTPForSignIn(email: TEST_EMAIL,
                                                                mobileNo: TEST_MOBILE) { (result, error) in
                                                                 
+            }
         }
 
         
