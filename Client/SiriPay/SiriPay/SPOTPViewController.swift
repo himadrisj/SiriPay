@@ -12,8 +12,21 @@ class SPOTPViewController : UIViewController {
     
     
     @IBOutlet weak var nextButton: UIBarButtonItem!
+    var otpString: String?
     
-    
+    @IBAction func nextButtonTapped(sender: AnyObject) {
+        
+        SPPaymentController.sharedInstance.doSignIn(otp: otpString!) { (error) in
+            
+            if error == nil {
+                self.performSegueWithIdentifier("SiriPaySegueIdentifier", sender: nil)
+            } else {
+                print("Wrong OTP with error = \(error)")
+            }
+            
+        }
+        
+    }
 }
 
 extension SPOTPViewController : UITextFieldDelegate {
@@ -28,4 +41,8 @@ extension SPOTPViewController : UITextFieldDelegate {
         
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let otp = sender as! String
+        otpString = otp
+    }
 }

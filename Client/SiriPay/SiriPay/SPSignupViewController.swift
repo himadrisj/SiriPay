@@ -40,15 +40,35 @@ class SPSignupViewController : UIViewController {
         }
     }
     
+    
     @IBAction func nextButtonTapped(sender: AnyObject) {
         
-        NSUserDefaults.standardUserDefaults().setObject(emailTextField.text, forKey: kDefaults_UserName)
-        NSUserDefaults.standardUserDefaults().setObject(emailTextField.text, forKey: kDefaults_MobileNumber)
+        NSUserDefaults.standardUserDefaults().setObject(TEST_EMAIL, forKey: kDefaults_UserName)
+        NSUserDefaults.standardUserDefaults().setObject(TEST_MOBILE, forKey: kDefaults_MobileNumber)
         NSUserDefaults.standardUserDefaults().synchronize()
         
+        SPPaymentController.sharedInstance.requestOTPForSignIn(email: TEST_EMAIL,
+                                                               mobileNo: TEST_MOBILE) { (result, error) in
+                                                                
+                                                                if let _ = error {
+                                                                    print("Error while signing in = \(error)")
+                                                                    let alert = UIAlertController(title: "Wrong username or password", message:"Please try again", preferredStyle: UIAlertControllerStyle.Alert)
+                                                                    
+                                                                    let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: nil)
+                                                                    
+                                                                    alert.addAction(okAction)
+                                                                    self.presentViewController(alert, animated: true, completion: nil)
+                                                                    
+                                                                    
+                                                                } else {
+                                                                    
+                                                                    self.performSegueWithIdentifier("OTPSegueIdentifier", sender: result.userMessage)
+                                                                    
+                                                                }
+                                                                
+        }
         
     }
-    
     
 }
 
