@@ -43,8 +43,8 @@ class SPSignupViewController : UIViewController {
     
     @IBAction func nextButtonTapped(_ sender: AnyObject) {
         
-        UserDefaults.standard.set(TEST_EMAIL, forKey: kDefaults_UserName)
-        UserDefaults.standard.set(TEST_MOBILE, forKey: kDefaults_MobileNumber)
+        UserDefaults.standard.set(emailTextField.text, forKey: kDefaults_UserName)
+        UserDefaults.standard.set(numberTextField.text, forKey: kDefaults_MobileNumber)
         UserDefaults.standard.synchronize()
         
         SPPaymentController.sharedInstance.requestOTPForSignIn(email: emailTextField.text!,
@@ -62,7 +62,7 @@ class SPSignupViewController : UIViewController {
                                                                     
                                                                 } else {
                                                                     
-                                                                    self.performSegue(withIdentifier: "OTPSegueIdentifier", sender: result?.userMessage)
+                                                                    self.performSegue(withIdentifier: "OTPSegueIdentifier", sender: self)
                                                                     
                                                                 }
                                                                 
