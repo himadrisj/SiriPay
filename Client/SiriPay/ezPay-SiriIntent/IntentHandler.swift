@@ -17,14 +17,92 @@ import Intents
 // "<myApp> John saying hello"
 // "Search for messages in <myApp>"
 
-class IntentHandler: INExtension, INSendMessageIntentHandling, INSearchForMessagesIntentHandling, INSetMessageAttributeIntentHandling {
+class IntentHandler: INExtension, INSendPaymentIntentHandling {
     
     override func handler(for intent: INIntent) -> Any {
         // This is the default implementation.  If you want different objects to handle different intents,
         // you can override this and return the handler you want for that particular intent.
         
         return self
+        
     }
+    
+    
+    /*!
+     @brief handling method
+     
+     @abstract Execute the task represented by the INSendPaymentIntent that's passed in
+     @discussion This method is called to actually execute the intent. The app must return a response for this intent.
+     
+     @param  sendPaymentIntent The input intent
+     @param  completion The response handling block takes a INSendPaymentIntentResponse containing the details of the result of having executed the intent
+     
+     @see  INSendPaymentIntentResponse
+     */
+    public func handle(sendPayment intent: INSendPaymentIntent, completion: @escaping (INSendPaymentIntentResponse) -> Swift.Void) {
+        // Implement your application logic for payment here.
+        let phoneNo = ""
+        let amount = ""
+        
+        var payInfo = [String:String]()
+        payInfo["phone"] = phoneNo
+        payInfo["amount"] = amount
+        
+        let defaults = UserDefaults(suiteName: "group.com.phonepe.ezpay")
+        defaults?.set(payInfo, forKey: payInfoUserDefaultsKey)
+        defaults?.synchronize()
+        
+        let userActivity = NSUserActivity(activityType: NSStringFromClass(INSendPaymentIntent.self))
+        let response = INSendPaymentIntentResponse(code: .success, userActivity: userActivity)
+        completion(response)
+    }
+    
+    
+    
+    /*!
+     @brief Confirmation method
+     @abstract Validate that this intent is ready for the next step (i.e. handling)
+     @discussion These methods are called prior to asking the app to handle the intent. The app should return a response object that contains additional information about the intent, which may be relevant for the system to show the user prior to handling. If unimplemented, the system will assume the intent is valid following resolution, and will assume there is no additional information relevant to this intent.
+     
+     @param  sendPaymentIntent The input intent
+     @param  completion The response block contains an INSendPaymentIntentResponse containing additional details about the intent that may be relevant for the system to show the user prior to handling.
+     
+     @see INSendPaymentIntentResponse
+     
+     */
+    public func confirm(sendPayment intent: INSendPaymentIntent, completion: @escaping (INSendPaymentIntentResponse) -> Swift.Void) {
+        
+    }
+    
+    
+    
+    /*!
+     @brief Resolution methods
+     @abstract Determine if this intent is ready for the next step (confirmation)
+     @discussion These methods are called to make sure the app extension is capable of handling this intent in its current form. This method is for validating if the intent needs any further fleshing out.
+     
+     @param  sendPaymentIntent The input intent
+     @param  completion The response block contains an INIntentResolutionResult for the parameter being resolved
+     
+     @see INIntentResolutionResult
+     
+     */
+    public func resolvePayee(forSendPayment intent: INSendPaymentIntent, with completion: @escaping (INPersonResolutionResult) -> Swift.Void) {
+        
+    }
+    
+    
+    public func resolveCurrencyAmount(forSendPayment intent: INSendPaymentIntent, with completion: @escaping (INCurrencyAmountResolutionResult) -> Swift.Void) {
+        
+    }
+    
+    
+    public func resolveNote(forSendPayment intent: INSendPaymentIntent, with completion: @escaping (INStringResolutionResult) -> Swift.Void) {
+        
+    }
+    
+    
+    #if false
     
     // MARK: - INSendMessageIntentHandling
     
@@ -120,5 +198,6 @@ class IntentHandler: INExtension, INSendMessageIntentHandling, INSearchForMessag
         let response = INSetMessageAttributeIntentResponse(code: .success, userActivity: userActivity)
         completion(response)
     }
+    #endif
 }
 

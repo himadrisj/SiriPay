@@ -38,6 +38,8 @@ class SPOTPViewController : UIViewController {
                 self.performSegue(withIdentifier: "SiriPaySegueIdentifier", sender: nil)
                 
             } else {
+                CTSOauthManager.readPasswordSigninOuthData();
+                
                 print("Wrong OTP with error = \(error)")
                 
                 let alert = UIAlertController(title: "Wrong OTP", message:"Please try again", preferredStyle: UIAlertControllerStyle.alert)
