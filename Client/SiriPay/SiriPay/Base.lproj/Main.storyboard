@@ -6,78 +6,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Sign in-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="SPSignupViewController" customModule="SiriPay" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yd1-fL-Xuq" userLabel="Email">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmx-F8-4Pk" userLabel="Number">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Skg-Bl-qCH" userLabel="EmailField">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="196" id="9ZQ-Kd-AbZ"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="arz-2d-b4O" userLabel="NumberField">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="196" id="xDL-RA-haV"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="jJk-2n-6PH"/>
-                                </connections>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="arz-2d-b4O" firstAttribute="leading" secondItem="jmx-F8-4Pk" secondAttribute="trailing" constant="8.5" id="0bw-fC-any"/>
-                            <constraint firstItem="Skg-Bl-qCH" firstAttribute="leading" secondItem="yd1-fL-Xuq" secondAttribute="trailing" constant="12.5" id="7hl-ag-Teb"/>
-                            <constraint firstItem="arz-2d-b4O" firstAttribute="centerY" secondItem="jmx-F8-4Pk" secondAttribute="centerY" constant="1.5" id="Je3-5r-ldk"/>
-                            <constraint firstItem="Skg-Bl-qCH" firstAttribute="centerY" secondItem="yd1-fL-Xuq" secondAttribute="centerY" id="QYy-rs-g0k"/>
-                            <constraint firstItem="jmx-F8-4Pk" firstAttribute="centerX" secondItem="yd1-fL-Xuq" secondAttribute="centerX" id="Z57-yS-3dd"/>
-                            <constraint firstItem="yd1-fL-Xuq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-92.5" id="fL8-ha-8Gr"/>
-                            <constraint firstItem="yd1-fL-Xuq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-56.75" id="ghp-Be-Ck4"/>
-                            <constraint firstItem="jmx-F8-4Pk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-9.75" id="jCZ-O2-Bjs"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Sign in" id="t9z-NV-36a">
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Next" id="xJG-28-bco">
-                            <connections>
-                                <action selector="nextButtonTapped:" destination="BYZ-38-t0r" id="xJJ-6t-jxk"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="emailTextField" destination="Skg-Bl-qCH" id="rLi-20-WWf"/>
-                        <outlet property="nextButton" destination="xJG-28-bco" id="geN-uI-1Tl"/>
-                        <outlet property="numberTextField" destination="arz-2d-b4O" id="nh7-cc-YjW"/>
-                        <segue destination="sfe-u9-dg3" kind="show" identifier="OTPSegueIdentifier" id="hS1-xl-FAS"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="960.79999999999995" y="790.25487256371821"/>
-        </scene>
         <!--OTP-->
         <scene sceneID="hp0-uf-TT3">
             <objects>
@@ -117,6 +45,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="nextButton" destination="Wrz-hc-RNU" id="S7A-hx-blf"/>
+                        <outlet property="otpField" destination="btx-hT-ccL" id="I3m-pR-inL"/>
                         <segue destination="x2H-f1-qOe" kind="show" identifier="SiriPaySegueIdentifier" id="mDU-Ef-yD4"/>
                     </connections>
                 </viewController>
@@ -183,7 +112,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="LeD-WU-Pjy"/>
+                        <segue destination="sfe-u9-dg3" kind="relationship" relationship="rootViewController" id="GzZ-Ml-xnL"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SdV-QY-SIB" userLabel="First Responder" sceneMemberID="firstResponder"/>

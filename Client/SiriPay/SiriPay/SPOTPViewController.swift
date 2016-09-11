@@ -14,12 +14,29 @@ class SPOTPViewController : UIViewController {
     @IBOutlet weak var nextButton: UIBarButtonItem!
     var otpString: String?
     
+    @IBOutlet weak var otpField: UITextField!
+    
+    override func viewDidLoad() {
+        
+        SPPaymentController.sharedInstance.requestOTPForSignIn(email: TEST_EMAIL,
+                                                               mobileNo: TEST_MOBILE) { (result, error) in
+                                                                
+        }
+
+        
+    }
+    
     @IBAction func nextButtonTapped(_ sender: AnyObject) {
         
-        SPPaymentController.sharedInstance.doSignIn(otp: otpString!) { (error) in
+        SPPaymentController.sharedInstance.doSignIn(otp: otpField.text!) { (error) in
             
             if error == nil {
+                
+                UserDefaults.standard.set(true, forKey: kDefaults_SignedIn)
+                UserDefaults.standard.synchronize()
+                
                 self.performSegue(withIdentifier: "SiriPaySegueIdentifier", sender: nil)
+                
             } else {
                 print("Wrong OTP with error = \(error)")
                 
@@ -48,8 +65,4 @@ extension SPOTPViewController : UITextFieldDelegate {
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let otp = sender as! String
-        otpString = otp
-    }
 }
