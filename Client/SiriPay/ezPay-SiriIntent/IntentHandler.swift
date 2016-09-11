@@ -54,9 +54,9 @@ class IntentHandler: INExtension, INSendPaymentIntentHandling {
             payInfo["phone"] = phoneNo
             payInfo["amount"] = String(intAmount)
             
-            let defaults = UserDefaults(suiteName: "group.com.phonepe.ezpay")
-            defaults?.set(payInfo, forKey: payInfoUserDefaultsKey)
-            defaults?.synchronize()
+//            let defaults = UserDefaults(suiteName: "group.com.phonepe.ezpay")
+//            defaults?.set(payInfo, forKey: payInfoUserDefaultsKey)
+//            defaults?.synchronize()
             
             response = INSendPaymentIntentResponse(code: .success, userActivity: userActivity)
             
@@ -79,9 +79,26 @@ class IntentHandler: INExtension, INSendPaymentIntentHandling {
      @see INSendPaymentIntentResponse
      
      */
-//    public func confirm(sendPayment intent: INSendPaymentIntent, completion: @escaping (INSendPaymentIntentResponse) -> Swift.Void) {
-//        
-//    }
+    public func confirm(sendPayment intent: INSendPaymentIntent, completion: @escaping (INSendPaymentIntentResponse) -> Swift.Void) {
+        let response = INSendPaymentIntentResponse(code: .success, userActivity: nil)
+        response.paymentRecord = self.makePaymentRecord(for: intent)
+        completion(response)
+    }
+    
+    
+    func makePaymentRecord(for intent: INSendPaymentIntent, status: INPaymentStatus = .completed) -> INPaymentRecord? {
+        let paymentMethod = INPaymentMethod(type: .unknown, name: "SimplePay", identificationHint: nil, icon: nil)
+        
+        let localCurrencyAmmount = INCurrencyAmount(amount: (intent.currencyAmount?.amount)!, currencyCode: "INR")
+        return INPaymentRecord(
+            payee: intent.payee,
+            payer: nil,
+            currencyAmount: localCurrencyAmmount,
+            paymentMethod: paymentMethod,
+            note: intent.note,
+            status: status
+        )
+    }
     
     
     
@@ -136,7 +153,6 @@ class IntentHandler: INExtension, INSendPaymentIntentHandling {
 //        
 //    }
 //    
-    
    
 }
 
