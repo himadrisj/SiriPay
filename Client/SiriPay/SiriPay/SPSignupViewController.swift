@@ -47,8 +47,8 @@ class SPSignupViewController : UIViewController {
         NSUserDefaults.standardUserDefaults().setObject(TEST_MOBILE, forKey: kDefaults_MobileNumber)
         NSUserDefaults.standardUserDefaults().synchronize()
         
-        SPPaymentController.sharedInstance.requestOTPForSignIn(email: TEST_EMAIL,
-                                                               mobileNo: TEST_MOBILE) { (result, error) in
+        SPPaymentController.sharedInstance.requestOTPForSignIn(email: emailTextField.text!,
+                                                               mobileNo: numberTextField.text!) { (result, error) in
                                                                 
                                                                 if let _ = error {
                                                                     print("Error while signing in = \(error)")
