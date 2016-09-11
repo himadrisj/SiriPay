@@ -8,8 +8,6 @@
 	<string>ezPay-SiriIntent</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
-	<key>NSSiriUsageDescription</key>
-	<string>You can pay via Siri</string>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -40,5 +38,7 @@
 		<key>NSExtensionPrincipalClass</key>
 		<string>$(PRODUCT_MODULE_NAME).IntentHandler</string>
 	</dict>
+	<key>NSSiriUsageDescription</key>
+	<string>You can pay via Siri</string>
 </dict>
 </plist>

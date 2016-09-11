@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let contactStore = CNContactStore()
+    var backgroundTask: UIBackgroundTaskIdentifier?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         SPPaymentController.sharedInstance.initializeSDK()
@@ -35,10 +36,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        self.startBackgroundTask()
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        self.endBackgroundTask()
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
@@ -52,6 +55,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     class func getAppDelegate() -> AppDelegate {
         return UIApplication.shared.delegate as! AppDelegate
+    }
+    
+    private func startBackgroundTask() {
+        self.backgroundTask = UIApplication.shared.beginBackgroundTask {
+            [unowned self] in
+            self.endBackgroundTask()
+        }
+        
+        assert(self.backgroundTask != UIBackgroundTaskInvalid, "Appdelegate startBackgroundTask invalid task state")
+    }
+    
+    private func endBackgroundTask() {
+        if let bgTask = self.backgroundTask {
+            if(bgTask != UIBackgroundTaskInvalid) {
+                UIApplication.shared.endBackgroundTask(bgTask)
+                self.backgroundTask = UIBackgroundTaskInvalid
+            }
+        }
     }
     
     

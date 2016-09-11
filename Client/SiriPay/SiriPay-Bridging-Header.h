@@ -10,5 +10,6 @@
 #define SiriPay_Bridging_Header_h
 
 #import <CitrusPay/CitrusPay.h>
+#import "JSONModelLib.h"
 
 #endif /* SiriPay_Bridging_Header_h */

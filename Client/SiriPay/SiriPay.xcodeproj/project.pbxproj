@@ -34,6 +34,9 @@
 		E592F7F41D84E0BA000D04F9 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E592F7F21D84E0BA000D04F9 /* MainInterface.storyboard */; };
 		E592F7F81D84E0BA000D04F9 /* ezPay-SiriIntentUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E592F7EC1D84E0BA000D04F9 /* ezPay-SiriIntentUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E592F7FB1D84E0BA000D04F9 /* ezPay-SiriIntent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E592F7E31D84E0BA000D04F9 /* ezPay-SiriIntent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E592F8041D84E650000D04F9 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E592F8031D84E650000D04F9 /* Intents.framework */; };
+		E592F8081D84F227000D04F9 /* CitrusPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E592F7B71D8441BC000D04F9 /* CitrusPay.framework */; };
+		E592F8121D84F945000D04F9 /* SPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F7DC1D84477A000D04F9 /* SPConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +115,8 @@
 		E592F7F01D84E0BA000D04F9 /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
 		E592F7F31D84E0BA000D04F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		E592F7F51D84E0BA000D04F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E592F8031D84E650000D04F9 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		E592F8111D84F824000D04F9 /* ezPay-SiriIntent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ezPay-SiriIntent.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E592F8081D84F227000D04F9 /* CitrusPay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E592F8041D84E650000D04F9 /* Intents.framework in Frameworks */,
 				E592F7EE1D84E0BA000D04F9 /* IntentsUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,6 +162,7 @@
 		917019631D84811700E98B9D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E592F8031D84E650000D04F9 /* Intents.framework */,
 				917019641D84811700E98B9D /* Contacts.framework */,
 				E592F7ED1D84E0BA000D04F9 /* IntentsUI.framework */,
 			);
@@ -263,6 +271,7 @@
 		E592F7E41D84E0BA000D04F9 /* ezPay-SiriIntent */ = {
 			isa = PBXGroup;
 			children = (
+				E592F8111D84F824000D04F9 /* ezPay-SiriIntent.entitlements */,
 				E592F7E51D84E0BA000D04F9 /* IntentHandler.swift */,
 				E592F7E71D84E0BA000D04F9 /* Info.plist */,
 			);
@@ -352,6 +361,9 @@
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.Siri = {
 								enabled = 1;
 							};
@@ -362,6 +374,11 @@
 						DevelopmentTeam = 9GW78CXC2W;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					E592F7EB1D84E0BA000D04F9 = {
 						CreatedOnToolsVersion = 8.0;
@@ -447,6 +464,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E592F8121D84F945000D04F9 /* SPConstants.swift in Sources */,
 				E592F7E61D84E0BA000D04F9 /* IntentHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -662,10 +680,15 @@
 		E592F8001D84E0BA000D04F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "ezPay-SiriIntent/ezPay-SiriIntent.entitlements";
 				DEVELOPMENT_TEAM = 9GW78CXC2W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CitrusPaySDK",
+				);
 				INFOPLIST_FILE = "ezPay-SiriIntent/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.phonepe.eZPay.ezPay-SiriIntent";
+				PRODUCT_BUNDLE_IDENTIFIER = com.phonepe.eZPay.SiriIntent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -675,10 +698,15 @@
 		E592F8011D84E0BA000D04F9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "ezPay-SiriIntent/ezPay-SiriIntent.entitlements";
 				DEVELOPMENT_TEAM = 9GW78CXC2W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CitrusPaySDK",
+				);
 				INFOPLIST_FILE = "ezPay-SiriIntent/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.phonepe.eZPay.ezPay-SiriIntent";
+				PRODUCT_BUNDLE_IDENTIFIER = com.phonepe.eZPay.SiriIntent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
