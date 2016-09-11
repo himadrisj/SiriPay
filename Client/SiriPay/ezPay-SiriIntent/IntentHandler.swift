@@ -59,6 +59,7 @@ class IntentHandler: INExtension, INSendPaymentIntentHandling {
             defaults?.synchronize()
             
             response = INSendPaymentIntentResponse(code: .success, userActivity: userActivity)
+            response.paymentRecord = self.makePaymentRecord(for: intent)
             
         }
         
