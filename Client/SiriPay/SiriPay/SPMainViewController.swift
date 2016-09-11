@@ -24,28 +24,29 @@ class SPMainViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        if(INPreferences.siriAuthorizationStatus() == .notDetermined) {
-            INPreferences.requestSiriAuthorization() {
-                status in
-                print("Siri Auth Status is \(status)")
-            }
+        INPreferences.requestSiriAuthorization() {
+            status in
+            print("Siri Auth Status is \(status)")
         }
         
-        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: {
+        Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true, block: {
             timer in
+            print("Timer running")
             let defaults = UserDefaults(suiteName: "group.com.phonepe.ezpay")
             
             if let value = defaults?.object(forKey: payInfoUserDefaultsKey) as? [String: String] {
                 if let phoneNo = value["phone"] {
                     if let amount = value["amount"] {
-                        SPPaymentController.sharedInstance.sendPayment(to: phoneNo, amount: amount) {
-                            transferMoneyRes, error in
-                            print("Error is =\(error)")
-                            print("Response is =\(transferMoneyRes)")
-                        }
+                        if let amountString = String(amount) {
+                            SPPaymentController.sharedInstance.sendPayment(to: phoneNo, amount: amountString) {
+                                transferMoneyRes, error in
+                                print("Error is =\(error)")
+                                print("Response is =\(transferMoneyRes)")
+                                defaults?.set(nil, forKey: payInfoUserDefaultsKey)
+                                defaults?.synchronize()
+                            }
                         
-                        defaults?.set(nil, forKey: payInfoUserDefaultsKey)
-                        defaults?.synchronize()
+                        }                        
                     }
                 }
                 
