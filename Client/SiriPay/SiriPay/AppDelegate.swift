@@ -17,6 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         SPPaymentController.sharedInstance.initializeSDK()
+        
+        if UserDefaults.standard.bool(forKey: kDefaults_SignedIn) {
+            let navController = self.window?.rootViewController as! UINavigationController
+            navController.topViewController?.performSegue(withIdentifier: "SiriPaySegueIdentifier", sender: nil)
+        }
+        
         return true
     }
     

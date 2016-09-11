@@ -57,4 +57,4 @@ let TEST_TOKENIZED_CARD_CVV = "000"
 
 let kDefaults_UserName = "username"
 let kDefaults_MobileNumber = "number"
-
+let kDefaults_SignedIn = "signedIn"
