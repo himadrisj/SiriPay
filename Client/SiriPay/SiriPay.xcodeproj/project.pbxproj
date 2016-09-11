@@ -10,6 +10,7 @@
 		91317F001D8465E900B6163B /* SPSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91317EFF1D8465E900B6163B /* SPSignupViewController.swift */; };
 		917019601D846EB000E98B9D /* SPOTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9170195F1D846EB000E98B9D /* SPOTPViewController.swift */; };
 		917019621D84773F00E98B9D /* SPMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917019611D84773F00E98B9D /* SPMainViewController.swift */; };
+		917019651D84811700E98B9D /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 917019641D84811700E98B9D /* Contacts.framework */; };
 		E592F7A41D844189000D04F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F7A31D844189000D04F9 /* AppDelegate.swift */; };
 		E592F7A61D844189000D04F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F7A51D844189000D04F9 /* ViewController.swift */; };
 		E592F7A91D844189000D04F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E592F7A71D844189000D04F9 /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		91317EFF1D8465E900B6163B /* SPSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPSignupViewController.swift; sourceTree = "<group>"; };
 		9170195F1D846EB000E98B9D /* SPOTPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPOTPViewController.swift; sourceTree = "<group>"; };
 		917019611D84773F00E98B9D /* SPMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPMainViewController.swift; sourceTree = "<group>"; };
+		917019641D84811700E98B9D /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
 		E592F7A01D844189000D04F9 /* SiriPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiriPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E592F7A31D844189000D04F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E592F7A51D844189000D04F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				917019651D84811700E98B9D /* Contacts.framework in Frameworks */,
 				E592F7B91D8441BC000D04F9 /* CitrusPay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,6 +90,14 @@
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
+		917019631D84811700E98B9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				917019641D84811700E98B9D /* Contacts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E592F7971D844189000D04F9 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +106,7 @@
 				E592F7B51D8441BC000D04F9 /* CitrusPaySDK */,
 				E592F7A21D844189000D04F9 /* SiriPay */,
 				E592F7A11D844189000D04F9 /* Products */,
+				917019631D84811700E98B9D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

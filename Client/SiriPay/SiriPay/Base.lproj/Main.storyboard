@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yd1-fL-Xuq" userLabel="Email">
@@ -63,8 +63,7 @@
                     <navigationItem key="navigationItem" title="Sign in" id="t9z-NV-36a">
                         <barButtonItem key="rightBarButtonItem" enabled="NO" title="Next" id="xJG-28-bco">
                             <connections>
-                                <action selector="nextButtonTapped:" destination="BYZ-38-t0r" id="Vfg-Vu-tNM"/>
-                                <segue destination="sfe-u9-dg3" kind="show" id="l1l-qH-Clu"/>
+                                <action selector="nextButtonTapped:" destination="BYZ-38-t0r" id="xJJ-6t-jxk"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -72,6 +71,7 @@
                         <outlet property="emailTextField" destination="Skg-Bl-qCH" id="rLi-20-WWf"/>
                         <outlet property="nextButton" destination="xJG-28-bco" id="geN-uI-1Tl"/>
                         <outlet property="numberTextField" destination="arz-2d-b4O" id="nh7-cc-YjW"/>
+                        <segue destination="sfe-u9-dg3" kind="show" identifier="OTPSegueIdentifier" id="hS1-xl-FAS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -87,7 +87,7 @@
                         <viewControllerLayoutGuide type="bottom" id="aLN-eB-vi3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="NmT-Fq-3WB">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="btx-hT-ccL" userLabel="OTPField">
@@ -111,12 +111,13 @@
                     <navigationItem key="navigationItem" title="OTP" id="WxS-TZ-f39">
                         <barButtonItem key="rightBarButtonItem" enabled="NO" title="Next" id="Wrz-hc-RNU">
                             <connections>
-                                <segue destination="x2H-f1-qOe" kind="show" id="KBm-qX-7jy"/>
+                                <action selector="nextButtonTapped:" destination="sfe-u9-dg3" id="yUn-wu-6D2"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="nextButton" destination="Wrz-hc-RNU" id="S7A-hx-blf"/>
+                        <segue destination="x2H-f1-qOe" kind="show" identifier="SiriPaySegueIdentifier" id="mDU-Ef-yD4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SWa-tH-JUr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -132,7 +133,7 @@
                         <viewControllerLayoutGuide type="bottom" id="fXq-li-jIS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ui4-Gg-7Sr">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rq1-jy-WR4" userLabel="Send">
