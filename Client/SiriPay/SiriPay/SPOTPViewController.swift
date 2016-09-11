@@ -22,6 +22,13 @@ class SPOTPViewController : UIViewController {
                 self.performSegueWithIdentifier("SiriPaySegueIdentifier", sender: nil)
             } else {
                 print("Wrong OTP with error = \(error)")
+                
+                let alert = UIAlertController(title: "Wrong OTP", message:"Please try again", preferredStyle: UIAlertControllerStyle.Alert)
+                
+                let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: nil)
+                
+                alert.addAction(okAction)
+                self.presentViewController(alert, animated: true, completion: nil)
             }
             
         }
