@@ -3,7 +3,7 @@
 //  ezPay-SiriIntentUI
 //
 //  Created by Himadri Sekhar Jyoti on 11/09/16.
-//  Copyright © 2016 PhonePe Internet Private Limited. All rights reserved.
+//  Copyright © 2016
 //
 
 import IntentsUI

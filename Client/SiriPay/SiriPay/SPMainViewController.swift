@@ -3,7 +3,7 @@
 //  SiriPay
 //
 //  Created by Jatin Arora on 10/09/16.
-//  Copyright © 2016 PhonePe Internet Private Limited. All rights reserved.
+//  Copyright
 //
 
 import Foundation
@@ -35,7 +35,7 @@ class SPMainViewController: UIViewController {
         Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true, block: {
             timer in
             print("Timer running")
-            let defaults = UserDefaults(suiteName: "group.com.phonepe.ezpay")
+            let defaults = UserDefaults(suiteName: "group.com.example.ezpay")
             
             if let value = defaults?.object(forKey: payInfoUserDefaultsKey) as? [String: String] {
                 if let phoneNo = value["phone"] {
@@ -83,7 +83,7 @@ class SPMainViewController: UIViewController {
         
         print(contactsDict)
         
-        let defaults = UserDefaults(suiteName: "group.com.phonepe.ezpay")
+        let defaults = UserDefaults(suiteName: "group.com.example.ezpay")
         defaults?.set(contactsDict, forKey: contactsSharedKey)
         defaults?.synchronize()
     }

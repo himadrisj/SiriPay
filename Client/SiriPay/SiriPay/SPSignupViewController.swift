@@ -3,7 +3,7 @@
 //  SiriPay
 //
 //  Created by Jatin Arora on 10/09/16.
-//  Copyright © 2016 PhonePe Internet Private Limited. All rights reserved.
+//  Copyright 
 //
 
 import Foundation

@@ -624,7 +624,7 @@
 				);
 				INFOPLIST_FILE = SiriPay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.phonepe.eZPay;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.eZPay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SiriPay-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -644,7 +644,7 @@
 				);
 				INFOPLIST_FILE = SiriPay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.phonepe.eZPay;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.eZPay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SiriPay-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -657,7 +657,7 @@
 				DEVELOPMENT_TEAM = 9GW78CXC2W;
 				INFOPLIST_FILE = "ezPay-SiriIntentUI/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.phonepe.eZPay.ezPay-SiriIntentUI";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.eZPay.ezPay-SiriIntentUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -670,7 +670,7 @@
 				DEVELOPMENT_TEAM = 9GW78CXC2W;
 				INFOPLIST_FILE = "ezPay-SiriIntentUI/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.phonepe.eZPay.ezPay-SiriIntentUI";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.eZPay.ezPay-SiriIntentUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -688,7 +688,7 @@
 				);
 				INFOPLIST_FILE = "ezPay-SiriIntent/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.phonepe.eZPay.SiriIntent;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.eZPay.SiriIntent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -706,7 +706,7 @@
 				);
 				INFOPLIST_FILE = "ezPay-SiriIntent/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.phonepe.eZPay.SiriIntent;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.eZPay.SiriIntent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;

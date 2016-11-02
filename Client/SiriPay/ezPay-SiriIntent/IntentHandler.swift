@@ -3,7 +3,7 @@
 //  ezPay-SiriIntent
 //
 //  Created by Himadri Sekhar Jyoti on 11/09/16.
-//  Copyright © 2016 PhonePe Internet Private Limited. All rights reserved.
+//  Copyright
 //
 
 import Intents
@@ -44,7 +44,7 @@ class IntentHandler: INExtension, INSendPaymentIntentHandling {
         // Implement your application logic for payment here.
         var thePhoneNO = "9886957281" //"9711165687" //"9742048795"
         
-        let defaults = UserDefaults(suiteName: "group.com.phonepe.ezpay")
+        let defaults = UserDefaults(suiteName: "group.com.example.ezpay")
         if let contactDict = defaults?.object(forKey: contactsSharedKey) as? [String: String] {
             if let lowerCaseName = intent.payee?.displayName.lowercased() {
                 if let phNo = contactDict[lowerCaseName] {
@@ -64,7 +64,7 @@ class IntentHandler: INExtension, INSendPaymentIntentHandling {
             payInfo["phone"] = thePhoneNO
             payInfo["amount"] = String(intAmount)
             
-            let defaults = UserDefaults(suiteName: "group.com.phonepe.ezpay")
+            let defaults = UserDefaults(suiteName: "group.com.example.ezpay")
             defaults?.set(payInfo, forKey: payInfoUserDefaultsKey)
             defaults?.synchronize()
             
@@ -138,7 +138,7 @@ class IntentHandler: INExtension, INSendPaymentIntentHandling {
 //            }
 //        }
         
-        let defaults = UserDefaults(suiteName: "group.com.phonepe.ezpay")
+        let defaults = UserDefaults(suiteName: "group.com.example.ezpay")
         if let contactDict = defaults?.object(forKey: contactsSharedKey) as? [String: String] {
             if(contactDict[payee.displayName.lowercased()]?.characters.count == 10) {
                 completion(INPersonResolutionResult.success(with: payee))
